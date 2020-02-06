@@ -1,3 +1,5 @@
+package Utilities;
+
 import java.math.BigInteger;
 import java.security.SecureRandom;
 
@@ -47,34 +49,8 @@ public class RSA {
         return (new BigInteger(cipherText)).modPow(d, n).toByteArray();
     }
 
-    public byte[] getPublicKey()
+    public RSAPublicKey getPublicKey()
     {
-        byte[] e = this.e.toByteArray();
-        byte[] n = this.n.toByteArray();
-
-        byte[] publicKey = Utilities.combineArrays(e, n);
-
-        return publicKey;
+        return new RSAPublicKey(this.e, this.n);
     }
-
-    public int getELen()
-    {
-        return this.e.toByteArray().length;
-    }
-
-    public int getNLen()
-    {
-        return this.n.toByteArray().length;
-    }
-
-    public BigInteger getE()
-    {
-        return this.e;
-    }
-
-    public BigInteger getN()
-    {
-        return this.n;
-    }
-
 }
