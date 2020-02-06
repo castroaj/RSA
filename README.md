@@ -1,6 +1,6 @@
 # RSA
 
-Simple Java RSA implementation. Allows for encryption of any given byte array. Allows user to then decrypt that byte array using the RSA object itself. Also allows user to easliy aq
+Simple Java RSA implementation. Allows for encryption of any given byte array. Allows user to then decrypt that byte array using the RSA object itself. Also allows user to easliy aquire a public key of the new created RSA object
 
 Designed for the Reciever to use RSA(int bitLen) constructor to create an instance of the object and then send the public key to the out to whoever wants to send encrypted data to them.
 
